@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar01 with Dropdowns</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  .input-group001 {
+    position: relative;
+}
+
+.input-group001-text {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+</style>
+    
+    
+<body>
+
+    <!-- navbar01 -->
+    <div class="col-md-6">
+        <label>Current Password</label>
+        <div class="input-group001">
+            <input type="password" id="current-password" class="form-control" placeholder="Enter Current Password">
+            <span class="input-group001-text">
+                <i class="bi bi-eye-slash" id="toggleCurrentPassword" style="cursor: pointer;"></i>
+            </span>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <label>New Password</label>
+        <div class="input-group001">
+            <input type="password" id="new-password" class="form-control" placeholder="Enter New Password">
+            <span class="input-group001-text">
+                <i class="bi bi-eye-slash" id="toggleNewPassword" style="cursor: pointer;"></i>
+            </span>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <label>Confirm Password</label>
+        <div class="input-group001">
+            <input type="password" id="confirm-password" class="form-control" placeholder="Enter Confirm Password">
+            <span class="input-group001-text">
+                <i class="bi bi-eye-slash" id="toggleConfirmPassword" style="cursor: pointer;"></i>
+            </span>
+        </div>
+    </div>
+    
+     
+     
+    <script>
+        // Toggle for Current Password
+        const toggleCurrentPassword = document.querySelector('#toggleCurrentPassword');
+        const currentPassword = document.querySelector('#current-password');
+        
+        toggleCurrentPassword.addEventListener('click', function () {
+            const type = currentPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            currentPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    
+        // Toggle for New Password
+        const toggleNewPassword = document.querySelector('#toggleNewPassword');
+        const newPassword = document.querySelector('#new-password');
+        
+        toggleNewPassword.addEventListener('click', function () {
+            const type = newPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            newPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    
+        // Toggle for Confirm Password
+        const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+        const confirmPassword = document.querySelector('#confirm-password');
+        
+        toggleConfirmPassword.addEventListener('click', function () {
+            const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    </script>
+    
+</body>
+</html>

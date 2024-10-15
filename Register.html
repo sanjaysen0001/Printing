@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>RupiooPrint</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* Basic reset for margins and padding */
+            /* * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            } */
+    
+          
+        </style>
+
+        
+    </head>
+<body>
+    
+    <div class="container-fluid ">
+        <div class="row cssforloginmargintop">
+            <div class="col-md-4 col-xl-4 col-lg-4 col-sm-2">
+
+            </div>
+            <div class="col-md-4 col-xl-4 col-lg-4 col-sm-8">
+                <div class="card" style="width: 100%; padding-bottom: 2rem;">
+                   <div style="display: flex;justify-content: center;">
+                    <img src="img/rupiooo.png"  class="card-img-top logosizelogin" alt="...">
+                   </div>
+                    <div class="card-body">
+                        <div class="row">
+                        <div class="col-md-6 col-xl-6 col-lg-6">
+                            <label style="color: black;">First Name</label>
+                            <div class="input-group001">
+                                <input type="text"   class="form-control" style="padding: 9px !important;"   placeholder="First name">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-6 col-lg-6">
+                            <label style="color: black;">Last Name</label>
+                            <div class="input-group001">
+                                <input type="text"   class="form-control" style="padding: 9px !important;"   placeholder="Last name">
+                                
+                            </div>
+                        </div>
+                    </div>
+                        <div class=" "  style="margin-top: 1rem;">
+                            <label style="color: black;">Email Address</label>
+                            <div class="input-group001">
+                                <input type="email"   class="form-control" style="padding: 9px !important;"   placeholder="Email Address">
+                                
+                            </div>
+                        </div>
+                        
+                        <div class=" " style="margin-top: 1rem;">
+                            <label style="color: black;">Current Password</label>
+                            <div class="input-group001">
+                                <input type="password" id="current-password" style="padding: 9px !important;"   class="form-control" placeholder=" Password">
+                                <span class="input-group001-text float-end">
+                                    <i class="bi bi-eye-slash"  id="toggleCurrentPassword" style="cursor: pointer; "></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        
+                        <div style="margin-top:  1.5rem;">
+                            <a href="Register.html">
+                            <button style="width: 100%;padding: 9px;border: 1px solid gray;  border-radius: 5px;">Create an account</button>
+                        </a>
+                        </div>
+                        <div style="margin-top:  1rem;text-align: center;">
+                            <span style="color: black;">
+                                Already have an account?
+                            </span>
+                           <span>
+                            <a href="Login.html" style="text-align: center;color: black;border-bottom: 1px solid black;">
+                                Sign In
+                       </a>
+                           </span>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-4 col-xl-4 col-lg-4 col-sm-2">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Toggle for Current Password
+        const toggleCurrentPassword = document.querySelector('#toggleCurrentPassword');
+        const currentPassword = document.querySelector('#current-password');
+        
+        toggleCurrentPassword.addEventListener('click', function () {
+            const type = currentPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            currentPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    
+        // Toggle for New Password
+        const toggleNewPassword = document.querySelector('#toggleNewPassword');
+        const newPassword = document.querySelector('#new-password');
+        
+        toggleNewPassword.addEventListener('click', function () {
+            const type = newPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            newPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    
+        // Toggle for Confirm Password
+        const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+        const confirmPassword = document.querySelector('#confirm-password');
+        
+        toggleConfirmPassword.addEventListener('click', function () {
+            const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    </script>
+</body>
+</html>
